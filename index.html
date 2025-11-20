@@ -191,7 +191,7 @@
         
 
     <!-- SEM 2 (placeholder, hidden for now) -->
-    <div id="sem2-section" class="hidden">
+    <div id="sem2-section" class="">
       <div class="window-box">SEM 2: Coming Soon</div>
 
       <label class="label">SEM 2 Short Link:</label>
@@ -206,7 +206,7 @@
     </div>
 
     <!-- SEM 3 (placeholder, hidden for now) -->
-    <div id="sem3-section" class="hidden">
+    <div id="sem3-section" class="">
       <div class="window-box">SEM 3: Coming Soon</div>
 
       <label class="label">SEM 3 Short Link:</label>
@@ -262,14 +262,14 @@ const SEM_LINKS = {
    Read teacher ID from URL
 ------------------------------------ */
 const params = new URLSearchParams(window.location.search);
-const teacherID = params.get('ID');
+const teacherID = params.get('i');
 
 /* ------------------------------------
    Function to build final links
 ------------------------------------ */
 function buildLink(base) {
   if (!teacherID) return base;
-  return base + "?ID=" + teacherID;
+  return base + "?i=" + teacherID;
 }
 
 /* ------------------------------------
